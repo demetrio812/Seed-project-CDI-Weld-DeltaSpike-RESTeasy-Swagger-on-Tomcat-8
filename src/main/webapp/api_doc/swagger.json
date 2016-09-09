@@ -1,0 +1,60 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "My API",
+    "contact" : {
+      "name" : "Demetrio Filocamo",
+      "url" : "http://www.novaware.co.uk",
+      "email" : "demetrio@novaware.co.uk"
+    }
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/api",
+  "tags" : [ {
+    "name" : "message"
+  }, {
+    "name" : "other"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/message/{param}" : {
+      "get" : {
+        "tags" : [ "message" ],
+        "summary" : "Test method",
+        "description" : "",
+        "operationId" : "printMessage",
+        "parameters" : [ {
+          "name" : "param",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/other/{param}" : {
+      "get" : {
+        "tags" : [ "other" ],
+        "summary" : "Other test method",
+        "description" : "",
+        "operationId" : "printMessage",
+        "parameters" : [ {
+          "name" : "param",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    }
+  }
+}
